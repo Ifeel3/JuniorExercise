@@ -47,7 +47,7 @@ func PrintMap(m map[string][]Position, orders []int) error {
 	for _, v := range orders {
 		tmp = append(tmp, strconv.Itoa(v))
 	}
-	if _, err := builder.WriteString("=+=+=+=\nСтраница сборки заказов " + strings.Join(tmp, ",") + "\n"); err != nil {
+	if _, err := builder.WriteString("=+=+=+=\nСтраница сборки заказов " + strings.Join(tmp, ",") + "\n\n"); err != nil {
 		return err
 	}
 	for k, arr := range m {
